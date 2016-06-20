@@ -1,0 +1,51 @@
+2016-05-24 09:10:29.714 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:10:29.722 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 09:11:49.611 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:11:49.619 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 09:12:04.365 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:12:04.374 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 09:12:09.604 [pool-1-thread-1] WARN  u.c.webmagic.downloader.HttpClientDownloader - download page http://www.spicezee.com/wenda/287_2.html error
+org.apache.http.conn.ConnectTimeoutException: Connect to www.spicezee.com:80 [www.spicezee.com/69.30.242.10] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:130) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:357) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:218) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:194) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:85) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106) ~[httpclient.jar:4.3.1]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:93) ~[webmagic-core.jar:na]
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409) [webmagic-core.jar:na]
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322) [webmagic-core.jar:na]
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74) [webmagic-core.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
+	at java.lang.Thread.run(Thread.java:662) [na:1.6.0_43]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.6.0_43]
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351) ~[na:1.6.0_43]
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213) ~[na:1.6.0_43]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200) ~[na:1.6.0_43]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366) ~[na:1.6.0_43]
+	at java.net.Socket.connect(Socket.java:529) ~[na:1.6.0_43]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:118) ~[httpclient.jar:4.3.1]
+	... 16 common frames omitted
+2016-05-24 09:12:29.394 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:12:29.405 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 09:15:09.535 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:15:09.544 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 09:16:50.551 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:16:50.560 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 09:17:25.545 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:17:25.554 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 09:18:05.088 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:18:05.095 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 09:25:00.149 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 09:25:00.157 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 10:07:13.301 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 10:07:13.310 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html
+2016-05-24 10:07:42.892 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-24 10:07:42.901 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/wenda/287_2.html

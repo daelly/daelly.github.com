@@ -1,0 +1,9 @@
+article_address = select short_name FROM tbl_region_code where is_hot=1
+
+folder_all = SELECT id,name,en_name from tbl_folder where `status`=1
+
+topic_all = SELECT id,title from tbl_topic where `status`=1
+
+tags_all = SELECT * from tbl_tags
+
+province_all = SELECT DISTINCT(region_code),code_name from tbl_region_url where parent_code='china'

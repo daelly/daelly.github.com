@@ -1,0 +1,51 @@
+## db local
+db.jdbcUrl = jdbc:mysql://192.168.101.190:3306/db_cms_release?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+db.user = sickf
+db.password = sickf68736
+
+isdev = false
+
+##文件上传路径
+##/usr/temp/uploadfile/cms
+##E:\\upload\\images
+upload_path=/usr/temp/uploadfile/cms
+
+##访问的前缀
+basePath=http://192.168.101.186:9001/cms
+
+## cookie
+secret = aa78c11d2a05698387dbeea4dd55fd9f
+domain = .sbyun.com
+## watermark, wechat use
+domain.name = www.sbyun.com
+
+##weixin
+token=a43sda7429fd
+appId=wx6077f37a7004030b
+appSecret=7992f77a93d7c4207265458b0db45f79
+##明文
+encryptMessage=false
+encodingAesKey=tQnnun7kAt5OZlX9OTKOUn22Dgk1lHTGFpsh1dK9tMU
+
+## https://portal.qiniu.com/signup?code=3lhz6lzh2821d
+gravatar.url = 
+
+## qiniu bcs [url]https://portal.qiniu.com/signup?code=3lhz6lzh2821d
+qiniu.ak = 1d0CiPXLAWVa8TbWnbQZzb-1k9ZSoU2mopE_g3PZ
+qiniu.sk = y5RuQVsgpcjoFN_xaQvtbygH_RdAClPL2Y5uy4Sv
+qiniu.bucket = sbyun
+
+# mail config
+mail.smtp.host = smtp.ym.163.com
+mail.smtp.auth = true
+mail.smtp.port = 25
+mail.stmp.debug = false
+mail.stmp.timeout = 2000
+mail.stmp.username = no-reply@sbyun.com
+mail.stmp.pwd = 
+mail.stmp.title = 
+
+# git hook
+git.pwd  = 
+sh.build = 
+sh.mail  = 

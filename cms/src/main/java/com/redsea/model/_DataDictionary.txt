@@ -1,0 +1,292 @@
+Table: sys_code
+-------------+---------------+------+-----+---------+---------
+ Field       | Type          | Null | Key | Default | Remarks 
+-------------+---------------+------+-----+---------+---------
+ id          | INT(10)       | NO   | PRI |         |         
+ paramname   | VARCHAR(50)   | YES  |     |         |         
+ paramtype   | VARCHAR(10)   | YES  |     |         |         
+ paramvalue  | VARCHAR(1000) | YES  |     |         |         
+ remark      | VARCHAR(200)  | YES  |     |         |         
+ create_by   | CHAR(36)      | YES  |     |         |         
+ create_time | DATETIME(19)  | YES  |     |         |         
+ update_by   | CHAR(36)      | YES  |     |         |         
+ update_time | DATETIME(19)  | YES  |     |         |         
+ isdelete    | INT(10)       | YES  |     | 0       |         
+-------------+---------------+------+-----+---------+---------
+
+Table: sys_dict
+-------------+--------------+------+-----+---------+---------
+ Field       | Type         | Null | Key | Default | Remarks 
+-------------+--------------+------+-----+---------+---------
+ id          | VARCHAR(64)  | NO   | PRI |         | 编号      
+ value       | VARCHAR(100) | YES  |     |         | 数据值     
+ label       | VARCHAR(100) | YES  |     |         | 标签名     
+ type        | VARCHAR(100) | YES  |     |         | 类型      
+ description | VARCHAR(100) | YES  |     |         | 描述      
+ sort        | DECIMAL(10)  | YES  |     |         | 排序（升序）  
+ parent_id   | VARCHAR(64)  | YES  |     | 0       | 父级编号    
+ create_by   | VARCHAR(64)  | YES  |     |         | 创建者     
+ create_time | DATETIME(19) | YES  |     |         | 创建时间    
+ update_by   | VARCHAR(64)  | YES  |     |         | 更新者     
+ update_time | DATETIME(19) | YES  |     |         | 更新时间    
+ del_flag    | INT(10)      | YES  |     | 0       | 删除标记    
+-------------+--------------+------+-----+---------+---------
+
+Table: sys_user
+-----------------+---------------+------+-----+---------+---------
+ Field           | Type          | Null | Key | Default | Remarks 
+-----------------+---------------+------+-----+---------+---------
+ userid          | INT(10)       | NO   | PRI |         | 主键      
+ username        | VARCHAR(32)   | NO   |     |         | 用户名/11111
+ password        | VARCHAR(32)   | NO   |     |         | 密码      
+ realname        | VARCHAR(32)   | YES  |     |         | 真实姓名    
+ state           | INT(10)       | YES  |     | 10      | 状态      
+ email           | VARCHAR(64)   | YES  |     |         | email   
+ tel             | VARCHAR(32)   | YES  |     |         | 手机号     
+ address         | VARCHAR(32)   | YES  |     |         | 地址      
+ remark          | VARCHAR(1000) | YES  |     |         | 说明      
+ session_id      | VARCHAR(50)   | YES  |     |         |         
+ last_ip         | VARCHAR(36)   | YES  |     |         |         
+ last_login_time | DATETIME(19)  | YES  |     |         |         
+ login_count     | INT(10)       | YES  |     | 0       |         
+ create_time     | VARCHAR(64)   | YES  |     |         | 创建时间    
+ create_id       | INT(10)       | YES  |     | 0       | 创建者     
+-----------------+---------------+------+-----+---------+---------
+
+Table: t_base_pinyin
+----------+--------------+------+-----+---------+---------
+ Field    | Type         | Null | Key | Default | Remarks 
+----------+--------------+------+-----+---------+---------
+ pin_yin_ | VARCHAR(255) | NO   |     |         |         
+ code_    | INT(10)      | NO   | PRI |         |         
+----------+--------------+------+-----+---------+---------
+
+Table: tbl_article
+---------------------+---------------+------+-----+---------+---------
+ Field               | Type          | Null | Key | Default | Remarks 
+---------------------+---------------+------+-----+---------+---------
+ id                  | INT(10)       | NO   | PRI |         | id      
+ folder_id           | INT(10)       | YES  |     | 1       | 目录id    
+ title               | VARCHAR(200)  | YES  |     |         | 文章名称    
+ keyword             | VARCHAR(100)  | YES  |     |         |         
+ content             | TEXT(65535)   | YES  |     |         | 文件内容    
+ summary             | VARCHAR(2000) | YES  |     |         |         
+ type                | INT(10)       | YES  |     | 1       |         
+ status              | INT(10)       | YES  |     | 0       | 0隐藏,1,显示
+ origin              | VARCHAR(100)  | YES  |     |         |         
+ origin_url          | VARCHAR(100)  | YES  |     |         | 来源地址    
+ sort                | INT(10)       | YES  |     | 1       | 排序      
+ template            | VARCHAR(255)  | YES  |     |         |         
+ topic_id            | INT(10)       | YES  |     |         |         
+ is_recommend        | INT(10)       | YES  |     | 0       | 是否推荐：0否 1 是
+ is_banner           | INT(10)       | YES  |     | 0       |         
+ count_comment       | INT(10)       | YES  |     | 0       | 评论数     
+ count_view          | INT(10)       | YES  |     | 0       | 浏览数     
+ image_url           | VARCHAR(256)  | YES  |     |         | 图片路径    
+ publish_time        | DATETIME(19)  | YES  |     |         | 发布时间    
+ publish_time_remark | VARCHAR(30)   | YES  |     |         |         
+ publish_user        | VARCHAR(64)   | YES  |     |         | 发布者     
+ address             | VARCHAR(50)   | YES  |     |         | 地区id    
+ start_time          | DATETIME(19)  | YES  |     |         | 开始时间    
+ end_time            | DATETIME(19)  | YES  |     |         | 结束时间    
+ update_time         | DATETIME(19)  | YES  |     |         | 更新时间    
+ create_time         | DATETIME(19)  | YES  |     |         | 创建时间    
+ create_by           | VARCHAR(64)   | YES  |     | 0       | 创建者     
+---------------------+---------------+------+-----+---------+---------
+
+Table: tbl_article_region
+-------------+-------------+------+-----+---------+---------
+ Field       | Type        | Null | Key | Default | Remarks 
+-------------+-------------+------+-----+---------+---------
+ id          | INT(10)     | NO   | PRI |         |         
+ article_id  | INT(10)     | YES  |     |         |         
+ region_code | VARCHAR(50) | YES  |     |         |         
+-------------+-------------+------+-----+---------+---------
+
+Table: tbl_article_tags
+------------+---------+------+-----+---------+---------
+ Field      | Type    | Null | Key | Default | Remarks 
+------------+---------+------+-----+---------+---------
+ id         | INT(10) | NO   | PRI |         |         
+ article_id | INT(10) | YES  |     |         |         
+ tag_id     | INT(10) | YES  |     |         |         
+------------+---------+------+-----+---------+---------
+
+Table: tbl_comment
+--------------+---------------+------+-----+---------+---------
+ Field        | Type          | Null | Key | Default | Remarks 
+--------------+---------------+------+-----+---------+---------
+ post_id      | BIGINT(19)    | NO   | PRI |         |         
+ parent_id    | BIGINT(19)    | YES  |     |         |         
+ author_id    | VARCHAR(50)   | YES  |     |         |         
+ author_name  | VARCHAR(100)  | YES  |     |         |         
+ author_email | VARCHAR(120)  | YES  |     |         |         
+ author_url   | VARCHAR(120)  | YES  |     |         |         
+ author_key   | VARCHAR(255)  | YES  |     |         |         
+ ip           | VARCHAR(20)   | YES  |     |         |         
+ agent        | VARCHAR(256)  | YES  |     |         | 评论用户浏览器的agent
+ create_at    | DATETIME(19)  | YES  |     |         |         
+ message      | VARCHAR(2000) | YES  |     |         | 评论内容    
+ status       | VARCHAR(20)   | YES  |     |         | 评论当前的状态 
+ type         | VARCHAR(20)   | YES  |     |         |         
+ thread_key   | INT(10)       | NO   |     |         | 对应article的主键
+ log_id       | BIGINT(19)    | YES  |     | 0       | 用于记录下次获取log时的起始点
+ user_id      | VARCHAR(50)   | YES  |     |         | 操作人Id   
+--------------+---------------+------+-----+---------+---------
+
+Table: tbl_folder
+--------------+--------------+------+-----+---------+---------
+ Field        | Type         | Null | Key | Default | Remarks 
+--------------+--------------+------+-----+---------+---------
+ id           | INT(10)      | NO   | PRI |         | 目录id    
+ parent_id    | INT(10)      | YES  |     | 0       | 父ID     
+ name         | VARCHAR(100) | YES  |     |         | 中文名     
+ en_name      | VARCHAR(100) | YES  |     |         |         
+ path         | VARCHAR(200) | YES  |     |         | 路径      
+ type         | INT(10)      | YES  |     | 1       | 类型 1 普通目录 2 a标签 3 a标签_blank 4 直接加载url信息
+ status       | INT(10)      | YES  |     | 1       | 1:显示,0:隐藏
+ sort         | INT(10)      | YES  |     | 1       | 排序      
+ display_home | INT(10)      | YES  |     | 0       | 是否在首页显示 
+ keywords     | VARCHAR(200) | YES  |     |         | SEO keywords
+ description  | VARCHAR(200) | YES  |     |         | SEO description
+ remark       | TEXT(65535)  | YES  |     |         | 描述      
+ create_time  | VARCHAR(64)  | YES  |     |         | 创建时间    
+ create_by    | VARCHAR(36)  | YES  |     | 0       | 创建者     
+ update_time  | VARCHAR(64)  | YES  |     |         | 更新时间    
+ update_by    | VARCHAR(36)  | YES  |     | 0       | 更新人     
+--------------+--------------+------+-----+---------+---------
+
+Table: tbl_ipdata
+-----------+--------------+------+-----+---------+---------
+ Field     | Type         | Null | Key | Default | Remarks 
+-----------+--------------+------+-----+---------+---------
+ id        | INT(10)      | NO   | PRI |         |         
+ start_ip  | VARCHAR(50)  | NO   |     |         |         
+ end_ip    | VARCHAR(50)  | NO   |     |         |         
+ country   | VARCHAR(200) | NO   |     |         |         
+ start_ip2 | VARCHAR(50)  | NO   |     |         |         
+-----------+--------------+------+-----+---------+---------
+
+Table: tbl_keyword
+--------------+--------------+------+-----+---------+---------
+ Field        | Type         | Null | Key | Default | Remarks 
+--------------+--------------+------+-----+---------+---------
+ id           | INT(10)      | NO   | PRI |         | 主键      
+ pid          | INT(10)      | NO   |     |         | 父ID：相关关键字和推荐关键字有此ID
+ keyword      | VARCHAR(50)  | NO   |     |         | 关键字     
+ search_index | INT(10)      | NO   |     | 0       | 搜索指数    
+ media_index  | INT(10)      | NO   |     | 0       | 媒体关注度   
+ update_time  | DATETIME(19) | YES  |     |         | 指数的最后更新时间
+ type         | TINYINT(3)   | NO   |     | 0       | 1相关关键字 2推荐关键字
+--------------+--------------+------+-----+---------+---------
+
+Table: tbl_login
+------------+--------------+------+-----+---------+---------
+ Field      | Type         | Null | Key | Default | Remarks 
+------------+--------------+------+-----+---------+---------
+ id         | INT(10)      | NO   | PRI |         |         
+ open_id    | VARCHAR(64)  | NO   |     |         |         
+ user_id    | INT(10)      | YES  |     |         |         
+ createtime | DATETIME(19) | YES  |     |         |         
+ nickname   | VARCHAR(64)  | YES  |     |         |         
+ head_photo | VARCHAR(128) | YES  |     |         |         
+ type       | VARCHAR(64)  | YES  |     |         |         
+ status     | INT(10)      | YES  |     | 0       |         
+------------+--------------+------+-----+---------+---------
+
+Table: tbl_people
+--------------+--------------+------+-----+---------+---------
+ Field        | Type         | Null | Key | Default | Remarks 
+--------------+--------------+------+-----+---------+---------
+ id           | VARCHAR(36)  | NO   | PRI |         | 增长自ID   
+ login_name   | VARCHAR(36)  | YES  |     |         |         
+ realname     | VARCHAR(30)  | YES  |     |         | 登录账号    
+ password     | VARCHAR(50)  | YES  |     |         | 登录密码    
+ mobile       | VARCHAR(30)  | YES  |     |         | 手机号码    
+ images       | VARCHAR(50)  | YES  |     |         |         
+ email        | VARCHAR(30)  | YES  |     |         | 用户邮箱    
+ state        | INT(10)      | YES  |     | 1       | 用户状态    
+ code         | VARCHAR(15)  | YES  |     |         | 随机验证码   
+ mobile_check | INT(10)      | YES  |     | 0       |         
+ email_check  | INT(10)      | YES  |     | 0       |         
+ create_time  | DATETIME(19) | YES  |     |         | 注册时间    
+--------------+--------------+------+-----+---------+---------
+
+Table: tbl_region_code
+--------------------+--------------+------+-----+---------+---------
+ Field              | Type         | Null | Key | Default | Remarks 
+--------------------+--------------+------+-----+---------+---------
+ region_code        | VARCHAR(50)  | NO   | PRI |         |         
+ parent_region_code | VARCHAR(50)  | NO   |     |         |         
+ name               | VARCHAR(100) | YES  |     |         |         
+ py_name            | VARCHAR(100) | YES  |     |         |         
+ short_name         | VARCHAR(50)  | YES  |     |         | 地区简称    
+ sort               | INT(10)      | NO   |     | 0       | 排序      
+ article_id         | INT(10)      | NO   |     |         | 文章ID    
+ is_hot             | TINYINT(3)   | NO   |     | 0       | 是否热门城市(做缓存): 0否 1是
+--------------------+--------------+------+-----+---------+---------
+
+Table: tbl_spider_job
+---------------+--------------+------+-----+---------+---------
+ Field         | Type         | Null | Key | Default | Remarks 
+---------------+--------------+------+-----+---------+---------
+ id            | INT(10)      | NO   | PRI |         |         
+ job_name      | VARCHAR(30)  | YES  |     |         |         
+ url_page      | VARCHAR(100) | YES  |     |         |         
+ links_rule    | VARCHAR(100) | YES  |     |         |         
+ spide_rule_id | INT(10)      | YES  |     |         |         
+---------------+--------------+------+-----+---------+---------
+
+Table: tbl_spider_rule
+-------------------+-------------+------+-----+---------+---------
+ Field             | Type        | Null | Key | Default | Remarks 
+-------------------+-------------+------+-----+---------+---------
+ id                | INT(10)     | NO   | PRI |         |         
+ name              | VARCHAR(20) | YES  |     |         |         
+ website           | VARCHAR(50) | YES  |     |         |         
+ title_rule        | VARCHAR(50) | YES  |     |         |         
+ content_rule      | VARCHAR(50) | YES  |     |         |         
+ summary_rule      | VARCHAR(50) | YES  |     |         |         
+ origin_rule       | VARCHAR(50) | YES  |     |         | 来源规则    
+ publish_user_rule | VARCHAR(50) | YES  |     |         |         
+ publish_time_rule | VARCHAR(50) | YES  |     |         |         
+-------------------+-------------+------+-----+---------+---------
+
+Table: tbl_tags
+----------+--------------+------+-----+---------+---------
+ Field    | Type         | Null | Key | Default | Remarks 
+----------+--------------+------+-----+---------+---------
+ id       | INT(10)      | NO   | PRI |         |         
+ tag_name | VARCHAR(100) | YES  |     |         |         
+----------+--------------+------+-----+---------+---------
+
+Table: tbl_topic
+--------------+--------------+------+-----+---------+---------
+ Field        | Type         | Null | Key | Default | Remarks 
+--------------+--------------+------+-----+---------+---------
+ id           | INT(10)      | NO   | PRI |         |         
+ title        | VARCHAR(50)  | YES  |     |         |         
+ keywords     | VARCHAR(100) | YES  |     |         |         
+ description  | VARCHAR(200) | YES  |     |         |         
+ publish_user | VARCHAR(30)  | YES  |     |         |         
+ template     | VARCHAR(50)  | YES  |     |         |         
+ status       | INT(10)      | YES  |     | 0       |         
+ publish_time | DATETIME(19) | YES  |     |         |         
+ titleImg     | VARCHAR(50)  | YES  |     |         |         
+ contentImg   | VARCHAR(50)  | YES  |     |         |         
+ create_by    | VARCHAR(36)  | YES  |     |         |         
+ update_by    | VARCHAR(36)  | YES  |     |         |         
+ create_time  | DATETIME(19) | YES  |     |         |         
+ update_time  | DATETIME(19) | YES  |     |         |         
+--------------+--------------+------+-----+---------+---------
+
+Table: title_cut_type
+---------+--------------+------+-----+---------+---------
+ Field   | Type         | Null | Key | Default | Remarks 
+---------+--------------+------+-----+---------+---------
+ id      | INT(10)      | NO   | PRI |         |         
+ keyword | VARCHAR(200) | YES  |     |         |         
+ num     | INT(10)      | YES  |     |         |         
+ type    | CHAR(3)      | YES  |     |         |         
+---------+--------------+------+-----+---------+---------
+

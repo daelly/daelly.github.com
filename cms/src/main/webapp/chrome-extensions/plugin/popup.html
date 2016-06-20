@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>采集</title>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/spider.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body style="width: 340px;">
+	<form id="spiderForm">
+	<table class="table">
+		<tr>
+			<td>保存地址：</td>
+			<td><input class="form-control" type="text" name="baseUrl" /></td>
+		</tr>
+		<tr>
+			<td>标题选择器：</td>
+			<td><input class="form-control" type="text" name="titleSelector" /></td>
+		</tr>
+		<tr>
+			<td>内容选择器：</td>
+			<td><input  class="form-control" type="text" name="contentSelector" /></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right;" style="text-align: right;"><button type="button" id="submitbtn" class="btn btn-primary">开始采集</button></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

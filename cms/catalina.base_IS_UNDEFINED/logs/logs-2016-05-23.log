@@ -1,0 +1,496 @@
+2016-05-23 14:34:59.013 [main] INFO  us.codecraft.webmagic.Spider - Spider github.com started!
+2016-05-23 14:34:59.019 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft
+2016-05-23 14:35:07.472 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/netty
+2016-05-23 14:35:07.474 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/following
+2016-05-23 14:35:07.478 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/webmagic
+2016-05-23 14:35:07.481 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/followers
+2016-05-23 14:35:07.483 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/stars/code4craft
+2016-05-23 14:35:07.863 [pool-1-thread-1] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/code4craft/netty
+2016-05-23 14:35:13.102 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/jsoup
+2016-05-23 14:35:14.644 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/tiny
+2016-05-23 14:35:15.053 [pool-1-thread-2] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/code4craft/tiny
+2016-05-23 14:35:17.439 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/blackhole
+2016-05-23 14:35:18.001 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/ipiaoniu/piaoniu
+2016-05-23 14:35:19.212 [pool-1-thread-1] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/ipiaoniu/piaoniu
+2016-05-23 14:35:19.445 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/neuland/jade4j
+2016-05-23 14:35:19.447 [pool-1-thread-3] WARN  u.c.webmagic.downloader.HttpClientDownloader - download page https://github.com/stars/code4craft error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.6.0_43]
+	at java.net.SocketInputStream.read(SocketInputStream.java:129) ~[na:1.6.0_43]
+	at com.sun.net.ssl.internal.ssl.InputRecord.readFully(InputRecord.java:422) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.InputRecord.read(InputRecord.java:460) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:863) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:820) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.AppInputStream.read(AppInputStream.java:75) ~[na:1.6]
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:208) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:191) ~[httpcore.jar:4.4.3]
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:137) ~[httpclient.jar:4.3.1]
+	at java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:221) ~[na:1.6.0_43]
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:141) ~[na:1.6.0_43]
+	at java.util.zip.GZIPInputStream.read(GZIPInputStream.java:90) ~[na:1.6.0_43]
+	at java.io.FilterInputStream.read(FilterInputStream.java:90) ~[na:1.6.0_43]
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1792) ~[commons-io.jar:2.4]
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1769) ~[commons-io.jar:2.4]
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1744) ~[commons-io.jar:2.4]
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:462) ~[commons-io.jar:2.4]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.getContent(HttpClientDownloader.java:193) ~[webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.handleResponse(HttpClientDownloader.java:182) ~[webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:96) ~[webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409) [webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322) [webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74) [webmagic-core-0.5.3.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
+	at java.lang.Thread.run(Thread.java:662) [na:1.6.0_43]
+2016-05-23 14:35:19.570 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/site/terms
+2016-05-23 14:35:20.455 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/site/privacy
+2016-05-23 14:35:23.459 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/jhy/jsoup
+2016-05-23 14:35:23.474 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/wifesays
+2016-05-23 14:35:24.826 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/code4craft/hostd
+2016-05-23 14:35:25.961 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/enterprise/2
+2016-05-23 14:35:27.130 [pool-1-thread-4] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/enterprise/2
+2016-05-23 14:35:27.780 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/categories/site
+2016-05-23 14:35:27.973 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/articles/amendment
+2016-05-23 14:35:28.091 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/visionmedia/jade
+2016-05-23 14:35:28.374 [pool-1-thread-2] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/articles/amendment
+2016-05-23 14:35:29.657 [pool-1-thread-3] WARN  u.c.webmagic.downloader.HttpClientDownloader - download page https://github.com/jhy/jsoup error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.6.0_43]
+	at java.net.SocketInputStream.read(SocketInputStream.java:129) ~[na:1.6.0_43]
+	at com.sun.net.ssl.internal.ssl.InputRecord.readFully(InputRecord.java:422) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.InputRecord.read(InputRecord.java:460) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:863) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:820) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.AppInputStream.read(AppInputStream.java:75) ~[na:1.6]
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:208) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:191) ~[httpcore.jar:4.4.3]
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:137) ~[httpclient.jar:4.3.1]
+	at java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:221) ~[na:1.6.0_43]
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:141) ~[na:1.6.0_43]
+	at java.util.zip.GZIPInputStream.read(GZIPInputStream.java:90) ~[na:1.6.0_43]
+	at java.io.FilterInputStream.read(FilterInputStream.java:90) ~[na:1.6.0_43]
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1792) ~[commons-io.jar:2.4]
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1769) ~[commons-io.jar:2.4]
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1744) ~[commons-io.jar:2.4]
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:462) ~[commons-io.jar:2.4]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.getContent(HttpClientDownloader.java:193) ~[webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.handleResponse(HttpClientDownloader.java:182) ~[webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:96) ~[webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409) [webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322) [webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74) [webmagic-core-0.5.3.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
+	at java.lang.Thread.run(Thread.java:662) [na:1.6.0_43]
+2016-05-23 14:35:30.658 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/neuland/spring
+2016-05-23 14:35:30.740 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/pugjs/pug
+2016-05-23 14:35:31.076 [pool-1-thread-3] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/neuland/spring
+2016-05-23 14:35:33.634 [pool-1-thread-1] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/categories/site
+2016-05-23 14:35:36.257 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/kylekatarnls/jade
+2016-05-23 14:35:36.681 [pool-1-thread-5] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/kylekatarnls/jade
+2016-05-23 14:35:38.564 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/SyrusAkbary/pyjade
+2016-05-23 14:35:39.702 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/brianc/jade
+2016-05-23 14:35:42.093 [pool-1-thread-1] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/brianc/jade
+2016-05-23 14:35:42.529 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/digitaltoad/vim
+2016-05-23 14:35:42.620 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/aaronmccall/jade
+2016-05-23 14:35:42.928 [pool-1-thread-2] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/digitaltoad/vim
+2016-05-23 14:35:43.005 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/donpark/html2jade
+2016-05-23 14:35:43.861 [pool-1-thread-4] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/aaronmccall/jade
+2016-05-23 14:35:47.289 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/SE7ENSKY/jade2php
+2016-05-23 14:35:52.801 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/ded/jade
+2016-05-23 14:35:54.146 [pool-1-thread-3] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/ded/jade
+2016-05-23 14:35:54.824 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/syrusakbary/pyjade
+2016-05-23 14:35:54.845 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/JumpLink/jade2html2jade
+2016-05-23 14:35:57.532 [pool-1-thread-1] WARN  u.c.webmagic.downloader.HttpClientDownloader - close response fail
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.6.0_43]
+	at java.net.SocketInputStream.read(SocketInputStream.java:129) ~[na:1.6.0_43]
+	at com.sun.net.ssl.internal.ssl.InputRecord.readFully(InputRecord.java:422) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.InputRecord.readV3Record(InputRecord.java:534) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.InputRecord.read(InputRecord.java:489) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:863) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:820) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.AppInputStream.read(AppInputStream.java:75) ~[na:1.6]
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:284) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:266) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:227) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:186) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:215) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:316) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120) ~[httpclient.jar:4.3.1]
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227) ~[httpclient.jar:4.3.1]
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174) ~[httpclient.jar:4.3.1]
+	at java.util.zip.InflaterInputStream.close(InflaterInputStream.java:210) ~[na:1.6.0_43]
+	at java.util.zip.GZIPInputStream.close(GZIPInputStream.java:111) ~[na:1.6.0_43]
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88) ~[httpcore.jar:4.4.3]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:115) ~[webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409) [webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322) [webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74) [webmagic-core-0.5.3.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
+	at java.lang.Thread.run(Thread.java:662) [na:1.6.0_43]
+2016-05-23 14:35:58.533 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/smaudet/html2jade
+2016-05-23 14:35:59.590 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/viktorbezdek/gulp
+2016-05-23 14:36:01.014 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page https://github.com/JumpLink/html
+2016-05-23 14:36:01.166 [pool-1-thread-2] WARN  u.c.webmagic.downloader.HttpClientDownloader - code error 404	https://github.com/viktorbezdek/gulp
+2016-05-23 14:36:06.019 [pool-1-thread-4] WARN  u.c.webmagic.downloader.HttpClientDownloader - download page https://github.com/JumpLink/html error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.6.0_43]
+	at java.net.SocketInputStream.read(SocketInputStream.java:129) ~[na:1.6.0_43]
+	at com.sun.net.ssl.internal.ssl.InputRecord.readFully(InputRecord.java:422) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.InputRecord.read(InputRecord.java:460) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:863) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:820) ~[na:1.6]
+	at com.sun.net.ssl.internal.ssl.AppInputStream.read(AppInputStream.java:75) ~[na:1.6]
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:284) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:165) ~[httpcore.jar:4.4.3]
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25) ~[na:1.6.0_43]
+	at java.lang.reflect.Method.invoke(Method.java:597) ~[na:1.6.0_43]
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138) ~[httpclient.jar:4.3.1]
+	at com.sun.proxy.$Proxy4.receiveResponseHeader(Unknown Source) ~[na:na]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272) ~[httpcore.jar:4.4.3]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124) ~[httpcore.jar:4.4.3]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:253) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:194) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:85) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82) ~[httpclient.jar:4.3.1]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106) ~[httpclient.jar:4.3.1]
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92) ~[webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409) [webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322) [webmagic-core-0.5.3.jar:na]
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74) [webmagic-core-0.5.3.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_43]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_43]
+	at java.lang.Thread.run(Thread.java:662) [na:1.6.0_43]
+2016-05-23 16:19:05.612 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:19:05.619 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/
+2016-05-23 16:20:41.166 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:20:41.174 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/
+2016-05-23 16:21:06.076 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:21:06.083 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/
+2016-05-23 16:21:07.448 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/index.html
+2016-05-23 16:21:07.449 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133942.html
+2016-05-23 16:21:07.449 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133935.html
+2016-05-23 16:21:07.449 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133938.html
+2016-05-23 16:21:07.451 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133937.html
+2016-05-23 16:21:08.200 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133933.html
+2016-05-23 16:21:08.405 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133944.html
+2016-05-23 16:21:08.486 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133943.html
+2016-05-23 16:21:08.497 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133945.html
+2016-05-23 16:21:08.556 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133881.html
+2016-05-23 16:21:08.605 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133880.html
+2016-05-23 16:21:08.822 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133878.html
+2016-05-23 16:21:08.892 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133877.html
+2016-05-23 16:21:08.959 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133876.html
+2016-05-23 16:21:09.033 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133946.html
+2016-05-23 16:21:09.109 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133874.html
+2016-05-23 16:21:09.221 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133873.html
+2016-05-23 16:21:09.459 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133872.html
+2016-05-23 16:21:09.603 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133871.html
+2016-05-23 16:21:09.656 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133870.html
+2016-05-23 16:21:09.678 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133869.html
+2016-05-23 16:21:09.898 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133868.html
+2016-05-23 16:21:09.963 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133867.html
+2016-05-23 16:21:10.048 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133866.html
+2016-05-23 16:21:10.385 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133865.html
+2016-05-23 16:21:10.470 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133864.html
+2016-05-23 16:21:10.571 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133863.html
+2016-05-23 16:21:10.770 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133862.html
+2016-05-23 16:21:10.821 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133861.html
+2016-05-23 16:21:10.881 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133860.html
+2016-05-23 16:21:10.902 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133859.html
+2016-05-23 16:21:10.973 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133858.html
+2016-05-23 16:21:11.327 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133857.html
+2016-05-23 16:21:11.405 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133838.html
+2016-05-23 16:21:11.633 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133839.html
+2016-05-23 16:21:11.729 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133840.html
+2016-05-23 16:21:11.828 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133841.html
+2016-05-23 16:21:11.835 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133842.html
+2016-05-23 16:21:11.872 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133843.html
+2016-05-23 16:21:12.136 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133844.html
+2016-05-23 16:21:12.350 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133845.html
+2016-05-23 16:21:12.587 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133846.html
+2016-05-23 16:21:12.731 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133847.html
+2016-05-23 16:21:12.785 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133849.html
+2016-05-23 16:21:12.978 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133850.html
+2016-05-23 16:21:13.176 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133853.html
+2016-05-23 16:21:13.317 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133856.html
+2016-05-23 16:21:13.384 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133785.html
+2016-05-23 16:21:13.721 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133784.html
+2016-05-23 16:21:13.873 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133783.html
+2016-05-23 16:21:14.054 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133782.html
+2016-05-23 16:21:14.201 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/26_2.html
+2016-05-23 16:21:14.337 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/26_3.html
+2016-05-23 16:21:15.023 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/26_4.html
+2016-05-23 16:21:15.116 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/26_5.html
+2016-05-23 16:21:15.117 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/26_6.html
+2016-05-23 16:21:15.171 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/26_7.html
+2016-05-23 16:21:15.209 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/26_836.html
+2016-05-23 16:21:15.420 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133757.html
+2016-05-23 16:21:15.494 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133699.html
+2016-05-23 16:21:15.522 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133608.html
+2016-05-23 16:21:15.556 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133615.html
+2016-05-23 16:21:15.640 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/89902.html
+2016-05-23 16:21:15.855 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/80321.html
+2016-05-23 16:21:16.015 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90068.html
+2016-05-23 16:21:16.261 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/4606.html
+2016-05-23 16:21:16.456 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133712.html
+2016-05-23 16:21:17.124 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/84764.html
+2016-05-23 16:21:17.391 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/3997.html
+2016-05-23 16:21:17.695 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/54899.html
+2016-05-23 16:21:17.708 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/3031.html
+2016-05-23 16:21:17.735 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/71011.html
+2016-05-23 16:21:17.960 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/84292.html
+2016-05-23 16:21:18.288 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/9772.html
+2016-05-23 16:21:18.518 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/9221.html
+2016-05-23 16:21:18.716 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/115460.html
+2016-05-23 16:21:18.812 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/49547.html
+2016-05-23 16:21:18.830 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/83709.html
+2016-05-23 16:21:18.847 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/19077.html
+2016-05-23 16:21:19.214 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/124050.html
+2016-05-23 16:21:19.233 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/87341.html
+2016-05-23 16:21:19.768 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/86217.html
+2016-05-23 16:21:20.123 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133136.html
+2016-05-23 16:21:20.342 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/103056.html
+2016-05-23 16:21:20.353 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/1315.html
+2016-05-23 16:21:20.592 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/100529.html
+2016-05-23 16:21:20.685 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/91933.html
+2016-05-23 16:21:20.691 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/89915.html
+2016-05-23 16:21:20.906 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/49015.html
+2016-05-23 16:21:21.078 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/97228.html
+2016-05-23 16:21:21.426 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/111442.html
+2016-05-23 16:21:21.574 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/83200.html
+2016-05-23 16:21:21.760 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/84097.html
+2016-05-23 16:21:21.897 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/82032.html
+2016-05-23 16:21:21.967 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/105650.html
+2016-05-23 16:21:22.215 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/93944.html
+2016-05-23 16:21:22.470 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/112667.html
+2016-05-23 16:21:22.613 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/127181.html
+2016-05-23 16:21:22.833 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/9188.html
+2016-05-23 16:21:23.097 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/71016.html
+2016-05-23 16:21:23.373 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/765.html
+2016-05-23 16:21:23.419 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/61797.html
+2016-05-23 16:21:23.564 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/112449.html
+2016-05-23 16:21:23.718 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133768.html
+2016-05-23 16:21:23.986 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133593.html
+2016-05-23 16:21:24.370 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/9486.html
+2016-05-23 16:21:24.564 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/441.html
+2016-05-23 16:21:24.951 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/445.html
+2016-05-23 16:21:24.952 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/112.html
+2016-05-23 16:21:25.364 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/444.html
+2016-05-23 16:21:25.439 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/448.html
+2016-05-23 16:21:25.661 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/532.html
+2016-05-23 16:21:25.946 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/685.html
+2016-05-23 16:21:25.973 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/684.html
+2016-05-23 16:21:26.078 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/318.html
+2016-05-23 16:21:26.454 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/7080.html
+2016-05-23 16:21:26.993 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133307.html
+2016-05-23 16:21:27.076 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/1343.html
+2016-05-23 16:21:27.147 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/4958.html
+2016-05-23 16:21:27.476 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/82118.html
+2016-05-23 16:21:27.597 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/86317.html
+2016-05-23 16:21:27.713 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/189.html
+2016-05-23 16:21:27.914 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/96956.html
+2016-05-23 16:21:28.211 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/89971.html
+2016-05-23 16:21:28.362 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/71844.html
+2016-05-23 16:21:28.522 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/97983.html
+2016-05-23 16:21:28.809 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/87283.html
+2016-05-23 16:21:28.894 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/9828.html
+2016-05-23 16:21:28.909 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/97517.html
+2016-05-23 16:21:29.010 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/94013.html
+2016-05-23 16:21:29.286 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90725.html
+2016-05-23 16:21:29.570 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/97784.html
+2016-05-23 16:21:29.943 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/105515.html
+2016-05-23 16:21:29.950 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/4512.html
+2016-05-23 16:21:29.962 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/84876.html
+2016-05-23 16:21:30.104 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/82457.html
+2016-05-23 16:21:30.492 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/61834.html
+2016-05-23 16:21:31.011 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/91261.html
+2016-05-23 16:21:31.313 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/1716.html
+2016-05-23 16:21:31.368 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/93338.html
+2016-05-23 16:21:31.385 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/3772.html
+2016-05-23 16:21:31.757 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/85689.html
+2016-05-23 16:21:32.042 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/4343.html
+2016-05-23 16:21:32.141 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/82291.html
+2016-05-23 16:21:32.272 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/89422.html
+2016-05-23 16:21:32.282 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/105640.html
+2016-05-23 16:21:32.561 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/85113.html
+2016-05-23 16:21:32.832 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/54955.html
+2016-05-23 16:21:32.968 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/89029.html
+2016-05-23 16:21:32.998 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/56642.html
+2016-05-23 16:21:33.096 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/80359.html
+2016-05-23 16:21:33.628 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/108364.html
+2016-05-23 16:21:34.206 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133592.html
+2016-05-23 16:21:34.242 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/975.html
+2016-05-23 16:21:34.280 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/1207.html
+2016-05-23 16:21:34.294 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/334.html
+2016-05-23 16:21:34.304 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/8927.html
+2016-05-23 16:21:34.687 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/844.html
+2016-05-23 16:21:34.978 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/1948.html
+2016-05-23 16:21:35.111 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133781.html
+2016-05-23 16:21:35.222 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133778.html
+2016-05-23 16:21:35.251 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133779.html
+2016-05-23 16:21:35.577 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133777.html
+2016-05-23 16:21:35.675 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133772.html
+2016-05-23 16:21:36.460 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133771.html
+2016-05-23 16:21:36.560 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133769.html
+2016-05-23 16:21:36.568 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133767.html
+2016-05-23 16:21:36.750 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133766.html
+2016-05-23 16:21:37.068 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133765.html
+2016-05-23 16:21:37.176 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133764.html
+2016-05-23 16:21:37.520 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133763.html
+2016-05-23 16:21:38.031 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133733.html
+2016-05-23 16:21:38.200 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133734.html
+2016-05-23 16:21:38.252 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133735.html
+2016-05-23 16:21:38.290 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133736.html
+2016-05-23 16:21:38.554 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133758.html
+2016-05-23 16:21:38.676 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133759.html
+2016-05-23 16:21:39.009 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133760.html
+2016-05-23 16:22:11.489 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:22:11.498 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90890.html
+2016-05-23 16:22:12.783 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/96240.html
+2016-05-23 16:22:12.785 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90891.html
+2016-05-23 16:22:12.786 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90889.html
+2016-05-23 16:22:12.787 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/index.html
+2016-05-23 16:22:12.789 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/
+2016-05-23 16:22:13.533 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/127338.html
+2016-05-23 16:22:13.559 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/55005.html
+2016-05-23 16:22:13.612 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/92466.html
+2016-05-23 16:22:13.699 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/91525.html
+2016-05-23 16:22:13.847 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/87504.html
+2016-05-23 16:22:13.999 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/88493.html
+2016-05-23 16:22:14.113 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/80046.html
+2016-05-23 16:22:14.406 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/9866.html
+2016-05-23 16:22:14.418 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/83243.html
+2016-05-23 16:22:14.463 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/93676.html
+2016-05-23 16:22:14.586 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/96092.html
+2016-05-23 16:22:14.604 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/95050.html
+2016-05-23 16:22:14.885 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/85060.html
+2016-05-23 16:22:14.926 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/19383.html
+2016-05-23 16:22:14.991 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/20516.html
+2016-05-23 16:22:15.739 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90427.html
+2016-05-23 16:22:15.846 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/87509.html
+2016-05-23 16:22:16.639 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/96315.html
+2016-05-23 16:22:17.070 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/93832.html
+2016-05-23 16:22:17.835 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/93909.html
+2016-05-23 16:22:18.018 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/99802.html
+2016-05-23 16:22:19.208 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/99841.html
+2016-05-23 16:22:19.305 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/2578.html
+2016-05-23 16:22:19.307 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/56539.html
+2016-05-23 16:22:19.373 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/127298.html
+2016-05-23 16:22:19.890 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/97966.html
+2016-05-23 16:22:20.493 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/79989.html
+2016-05-23 16:22:20.770 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/93283.html
+2016-05-23 16:22:21.638 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90724.html
+2016-05-23 16:22:22.312 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/6304.html
+2016-05-23 16:22:22.601 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/98338.html
+2016-05-23 16:22:23.520 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/115505.html
+2016-05-23 16:22:23.563 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129848.html
+2016-05-23 16:22:24.547 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129818.html
+2016-05-23 16:22:24.577 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129819.html
+2016-05-23 16:22:24.853 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129825.html
+2016-05-23 16:22:25.013 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129826.html
+2016-05-23 16:22:25.222 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129827.html
+2016-05-23 16:22:25.671 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129828.html
+2016-05-23 16:22:25.789 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129830.html
+2016-05-23 16:22:26.098 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129831.html
+2016-05-23 16:22:26.337 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/129832.html
+2016-05-23 16:22:26.551 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/7536.html
+2016-05-23 16:22:27.500 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/920.html
+2016-05-23 16:22:27.640 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/127623.html
+2016-05-23 16:22:27.806 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/9486.html
+2016-05-23 16:22:27.901 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/441.html
+2016-05-23 16:22:27.933 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/445.html
+2016-05-23 16:22:28.113 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/112.html
+2016-05-23 16:22:28.481 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/444.html
+2016-05-23 16:22:28.770 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/448.html
+2016-05-23 16:22:28.923 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/532.html
+2016-05-23 16:22:29.020 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/685.html
+2016-05-23 16:22:29.256 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/684.html
+2016-05-23 16:22:29.523 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/318.html
+2016-05-23 16:22:29.899 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/6310.html
+2016-05-23 16:22:30.264 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/127243.html
+2016-05-23 16:22:30.458 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/1317.html
+2016-05-23 16:22:30.554 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90888.html
+2016-05-23 16:22:30.740 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133942.html
+2016-05-23 16:22:31.054 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133938.html
+2016-05-23 16:22:31.065 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133937.html
+2016-05-23 16:22:31.086 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133935.html
+2016-05-23 16:22:31.376 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133933.html
+2016-05-23 16:22:31.605 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133944.html
+2016-05-23 16:22:31.743 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133943.html
+2016-05-23 16:22:31.874 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133945.html
+2016-05-23 16:22:32.009 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133881.html
+2016-05-23 16:22:32.160 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133880.html
+2016-05-23 16:22:32.295 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133878.html
+2016-05-23 16:22:32.443 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133877.html
+2016-05-23 16:22:32.585 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133876.html
+2016-05-23 16:22:33.295 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133946.html
+2016-05-23 16:22:33.696 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133874.html
+2016-05-23 16:22:33.890 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133873.html
+2016-05-23 16:22:33.898 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133872.html
+2016-05-23 16:22:33.917 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133871.html
+2016-05-23 16:22:34.064 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133870.html
+2016-05-23 16:22:34.311 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133869.html
+2016-05-23 16:22:34.589 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133868.html
+2016-05-23 16:22:34.733 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133867.html
+2016-05-23 16:22:35.124 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133866.html
+2016-05-23 16:22:35.277 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133865.html
+2016-05-23 16:22:35.388 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133864.html
+2016-05-23 16:22:35.569 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133863.html
+2016-05-23 16:22:36.094 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133862.html
+2016-05-23 16:22:36.341 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133861.html
+2016-05-23 16:22:36.711 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133860.html
+2016-05-23 16:22:36.899 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133859.html
+2016-05-23 16:22:36.965 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133858.html
+2016-05-23 16:22:37.106 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133857.html
+2016-05-23 16:22:37.136 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133838.html
+2016-05-23 16:22:37.181 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133839.html
+2016-05-23 16:22:37.779 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133840.html
+2016-05-23 16:22:37.813 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133841.html
+2016-05-23 16:22:38.078 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133842.html
+2016-05-23 16:22:38.309 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133843.html
+2016-05-23 16:22:38.470 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133844.html
+2016-05-23 16:22:38.620 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133845.html
+2016-05-23 16:22:38.621 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133846.html
+2016-05-23 16:22:38.919 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133847.html
+2016-05-23 16:22:39.483 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133849.html
+2016-05-23 16:22:39.672 [pool-1-thread-2] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133850.html
+2016-05-23 16:22:39.673 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133853.html
+2016-05-23 16:22:39.773 [pool-1-thread-5] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133856.html
+2016-05-23 16:22:39.878 [pool-1-thread-4] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133785.html
+2016-05-23 16:22:39.926 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133784.html
+2016-05-23 16:22:40.117 [pool-1-thread-3] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133783.html
+2016-05-23 16:22:47.862 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:22:47.868 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90890.html
+2016-05-23 16:25:31.192 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:25:31.200 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90890.html
+2016-05-23 16:26:06.636 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:26:06.643 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90890.html
+2016-05-23 16:36:13.132 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:36:13.142 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90890.html
+2016-05-23 16:36:27.442 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:36:27.452 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90890.html
+2016-05-23 16:39:12.081 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:39:12.088 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90890.html
+2016-05-23 16:44:05.124 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:44:05.149 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/90890.html
+2016-05-23 16:49:34.981 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:49:34.989 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133880.html
+2016-05-23 16:50:36.026 [main] INFO  us.codecraft.webmagic.Spider - Spider www.spicezee.com started!
+2016-05-23 16:50:36.034 [pool-1-thread-1] INFO  u.c.webmagic.downloader.HttpClientDownloader - downloading page http://www.spicezee.com/xinwen/133874.html
