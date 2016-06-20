@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="OnlineJudge"
+  id="myeclipse.1462869477141"
+  context-root="/OnlineJudge"
+  j2ee-spec="5.0"
+  archive="OnlineJudge.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
