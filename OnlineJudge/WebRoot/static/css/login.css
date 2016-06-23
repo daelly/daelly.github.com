@@ -1,0 +1,30 @@
+.hrsoft-login{background-color: #f5f6f7;}
+.hrsoft-login-bd{width: 500px;min-height: 370px; margin: 165px auto 0px auto;0;}
+.hrsoft-login-bd-L1{background-image: url('../img/outwork-login3.png');min-height: 90px;background-position: center center;background-repeat: no-repeat;}
+.hrsoft-login-bd-L2{margin-top: 20px;}
+.hrsoft-login-bd-L2 dt{width: 160px;float: right;border-left: #ccc solid 1px;}
+.hrsoft-login-bd-L2 dt em{display:block;float: right;}
+.hrsoft-login-bd-L2 dt span{display:block;font-size: 12px;margin-top: 5px;float: right;}
+.hrsoft-login-bd-L2 dd{margin-right: 180px;}
+
+.hrsoft-login-bd-L2 dd li{padding-bottom: 20px;}
+.hrsoft-login-bd-L2 dd li input[type="text"],.hrsoft-login-bd-L2 dd li input[type="password"]{border:#eee solid 1px;background-color: #fff; padding: 10px;width: 100%;}
+.hrsoft-login-bd-L2 dd li button{display: block; width:100%; line-height:35px;background-color:#427fed; color: #fff;border: none; box-shadow: none;}
+.hrsoft-login-bd-L2 dd li button:hover{background-color:#0585c5 ;}
+.hrsoft-login-fd{width: 700px;margin: 10px auto; text-align: center;}
+.hrsoft-login-fd span{ color: #9b9b9b;margin-right: 10px;}
+.hrsoft-login-fd a{ color: #9b9b9b; margin-right: 10px;}
+.hrsoft-login-fd a:hover{color: #00a0f0;}
+.hrsoft-login-findpass{}
+.hrsoft-login-findpass em{float: left;}
+.hrsoft-login-findpass em i{ margin-right: 10px;}
+.hrsoft-login-findpass em b{color:#9b9b9b;}
+.hrsoft-login-findpass s a{color:#9b9b9b;}
+.hrsoft-login-findpass s a:hover{color:#00a0f0;}
+
+.hrsoft-login-findpass s{float:right;}
+
+.Ver-code{}
+.Ver-code span{margin-right: 10px;}
+.Ver-code span input{padding:5px !important;}
+

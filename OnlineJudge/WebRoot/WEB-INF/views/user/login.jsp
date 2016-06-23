@@ -1,5 +1,41 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
+<%@ include file="/template/global.jsp" %>
+<layout:override name="title">OnlineJudge登录</layout:override>
+<layout:override name="static">
+	<script type="text/javascript" src="static/lib/jQuery/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="static/lib/layer/layer.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/daelly.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/login.css"/>
+	<script type="text/javascript" src="static/lib/bootstrap-3.3.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/lib/bootstrap-3.3.0/css/bootstrap.min.css"/>
+</layout:override>
+<layout:override name="content">
+<div class="hrsoft-login-bd">
+	<div class="hrsoft-login-bd-L1"></div>
+	<div class="hrsoft-login-bd-L2">
+		<dl>
+			<dt><em id="apk_code"><img src="static/img/outwork-login2.png"/></em><span>扫描二维码下载外勤宝APP</span></dt>
+			<dd>
+				<ul>
+					<li><input type="text" placeholder="请输入你的账号"/></li>
+					<li><input type="password" placeholder="请输入你的密码"/></li>
+					<li class="Ver-code" style="display: none;"><span><input type="text" placeholder="" style="width: 100px;"/></span><img src="static/img/ver-code.png"/><span></span><span><a>看不清楚换一张</a></span></li>
+					<li><button>登录</button></li>
+					<li class="hrsoft-login-findpass" style="margin-top: -10px;"><em><i><input type="checkbox" /></i><b>自动登录</b></em><s><a>找回密码</a></s></li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</div>
+
+
+
+
+<div id="enlarge_images" style="position: absolute;"></div>
+</layout:override>
+<jsp:include page="/template/base.jsp" />
+<%-- <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
@@ -96,4 +132,4 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</form>
     </script>
   </body>
-</html>
+</html> --%>

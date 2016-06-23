@@ -1,10 +1,9 @@
 package org.daelly.oj.tags;
 
-import javax.servlet.ServletRequest;
+import java.io.IOException;
+
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.BodyTagSupport;
-
-import org.springframework.util.StringUtils;
 /**
  * 一个block表示页面的一个块
  * @author daelly
@@ -18,25 +17,29 @@ public class BlockTag extends BodyTagSupport {
 	
 	@Override
 	public int doStartTag() throws JspException{
-		return super.doStartTag();
+		return getOverriedContent() == null ? EVAL_BODY_INCLUDE : SKIP_BODY;
 	}
 
 	@Override
 	public int doEndTag() throws JspException{
-		ServletRequest request = pageContext.getRequest();
-		//标签中的默认值
-		String defaultContent = getBodyContent()==null?"":getBodyContent().toString();
-		String bodyContent = (String) request.getAttribute(OverwriteTag.PREFIX+name);
-		//如果页面没有重写该模块，则显示默认内容
-		bodyContent = StringUtils.isEmpty(bodyContent)?defaultContent:bodyContent;
-		try {
-			pageContext.getOut().write(bodyContent);
-		} catch (Exception e) {
-			e.printStackTrace();
+		String overriedContent = getOverriedContent();
+		if(overriedContent == null) {
+			return EVAL_PAGE;
 		}
-		return super.doEndTag();
+		
+		try {
+			pageContext.getOut().write(overriedContent);
+		} catch (IOException e) {
+			throw new JspException("write overridedContent occer IOException,block name:" + name, e);
+		}
+		return EVAL_PAGE;
 	}
-
+	
+	private String getOverriedContent() {
+		String varName = Utils.getOverrideVariableName(name);
+		return (String) pageContext.getRequest().getAttribute(varName);
+	}
+	
 	public String getName() {
 		return name;
 	}
