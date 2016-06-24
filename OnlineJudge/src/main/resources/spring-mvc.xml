@@ -13,6 +13,16 @@
 	<mvc:resources mapping="/static/**" location="/static/" />
 	<mvc:annotation-driven/>
 	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/*"/>
+			<mvc:exclude-mapping path="/user/*"/>
+			<mvc:exclude-mapping path="/static/*"/>
+			<mvc:exclude-mapping path="/index"/>
+			<bean class="org.daelly.oj.interceptor.SessionInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
 	<!-- 自动扫描@Controller注入为bean -->
 	<context:component-scan base-package="org.daelly.oj.controller">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>

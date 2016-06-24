@@ -1,6 +1,8 @@
 package org.daelly.oj.utils;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MapUtils {
 
@@ -36,5 +38,15 @@ public class MapUtils {
 			sb.append(value[i]);
 		}
 		return sb.toString();
+	}
+	
+	public static Map<String,String> getSampleMap(Map<String,String[]> map){
+		Set<String> keySet = map.keySet();
+		Map<String,String> resMap = new HashMap<String, String>();
+		for (String key : keySet) {
+			String value = (String) getValue(map, key);
+			resMap.put(key, value);
+		}
+		return resMap;
 	}
 }

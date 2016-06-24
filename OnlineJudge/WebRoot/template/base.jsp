@@ -25,7 +25,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<layout:block name="static">
 		<script type="text/javascript" src="static/lib/jQuery/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="static/lib/layer/layer.js"></script>
-		<link rel="stylesheet" type="text/css" href="static/css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="static/lib/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="static/lib/webfont/webfont.css"/>
 		<link rel="stylesheet" type="text/css" href="static/css/daelly.css"/>
 	</layout:block>
 	<layout:block name="script">

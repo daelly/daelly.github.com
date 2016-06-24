@@ -4,11 +4,30 @@
 <layout:override name="static">
 	<script type="text/javascript" src="static/lib/jQuery/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="static/lib/layer/layer.js"></script>
-	<link rel="stylesheet" type="text/css" href="static/css/iconfont.css"/>
+	<script type="text/javascript" src="static/lib/Validform/5.3.2/Validform.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="static/css/daelly.css"/>
 	<link rel="stylesheet" type="text/css" href="static/css/login.css"/>
 	<script type="text/javascript" src="static/lib/bootstrap-3.3.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="static/lib/bootstrap-3.3.0/css/bootstrap.min.css"/>
+</layout:override>
+<layout:override name="script">
+	<script type="text/javascript">
+		$(function(){
+			<c:if test="${not empty error}">
+				layer.msg("${error}");
+				var randNum = parseInt(100*Math.random());
+				$("#login-rand-code").attr("src","user/randcode?_t="+randNum);
+				$("form input[name='randcode']").val("");
+				$(".hrsoft-login-bd-L2 .Ver-code").show();
+			</c:if>
+			$("form").Validform({tiptype:3});
+		});
+		
+		function refreshRandCode(){
+			var randNum = parseInt(100*Math.random());
+			$("#login-rand-code").attr("src","user/randcode?_t="+randNum);
+		}
+	</script>
 </layout:override>
 <layout:override name="content">
 <div class="hrsoft-login-bd">
@@ -17,20 +36,26 @@
 		<dl>
 			<dt><em id="apk_code"><img src="static/img/outwork-login2.png"/></em><span>扫描二维码下载外勤宝APP</span></dt>
 			<dd>
+				<form action="user/login" method="post">
 				<ul>
-					<li><input type="text" placeholder="请输入你的账号"/></li>
-					<li><input type="password" placeholder="请输入你的密码"/></li>
-					<li class="Ver-code" style="display: none;"><span><input type="text" placeholder="" style="width: 100px;"/></span><img src="static/img/ver-code.png"/><span></span><span><a>看不清楚换一张</a></span></li>
-					<li><button>登录</button></li>
-					<li class="hrsoft-login-findpass" style="margin-top: -10px;"><em><i><input type="checkbox" /></i><b>自动登录</b></em><s><a>找回密码</a></s></li>
+					<li><input type="text" name="username" placeholder="请输入你的账号" value="${username}" datatype="*" nullmsg="用户名不能为空" errormsg="" /></li>
+					<li><input type="password" name="password" placeholder="请输入你的密码" datatype="*" nullmsg="密码不能为空" errormsg="" /></li>
+					<li class="Ver-code" style="display: none;">
+						<span><input type="text" placeholder="" name="randcode" value="1234" style="width: 100px;" datatype="*" nullmsg="验证码不能为空" errormsg=""/></span>
+						<img id="login-rand-code" src=""/>
+						<span><a href="javascript:void(0)" onclick="refreshRandCode()">看不清楚换一张</a></span>
+					</li>
+					<li><button type="submit">登录</button></li>
+					<li class="hrsoft-login-findpass" style="margin-top: -10px;">
+						<em><i><input type="checkbox" /></i><b>自动登录</b></em>
+						<s><a>找回密码</a></s>
+					</li>
 				</ul>
+				</form>
 			</dd>
 		</dl>
 	</div>
 </div>
-
-
-
 
 <div id="enlarge_images" style="position: absolute;"></div>
 </layout:override>

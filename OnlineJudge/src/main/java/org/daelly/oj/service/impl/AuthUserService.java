@@ -2,11 +2,7 @@ package org.daelly.oj.service.impl;
 
 import java.sql.Timestamp;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
-
-import org.daelly.oj.pojo.AuthGroup;
 import org.daelly.oj.pojo.AuthUser;
 import org.daelly.oj.utils.MapUtils;
 import org.daelly.oj.utils.PasswordUtils;

@@ -12,10 +12,10 @@ import javax.imageio.ImageIO;
 public class RandCodeCreater {
 
 	//图片宽度
-	private final static int IMAGEWIDTH = 15;
+	private final static int IMAGEWIDTH = 18;
 	
 	//图片高度
-	private final static int IMAGEHEIGHT = 22;
+	private final static int IMAGEHEIGHT = 26;
 	
 	private final static int FONTSIZE = 18;
 	
@@ -31,7 +31,7 @@ public class RandCodeCreater {
 	
 	private static Random random = new Random();
 	
-	private static String getRandStr(){
+	public static String getRandStr(){
 		StringBuilder sb = new StringBuilder();
 		for(int i=0;i<CODESIZE;i++)
 			sb.append(CHARS[random.nextInt(CHARS.length)]);
@@ -50,7 +50,7 @@ public class RandCodeCreater {
 		return color;
 	}
 	
-	private static BufferedImage getImage(String randCode){
+	public static BufferedImage getImage(String randCode){
 		BufferedImage image = new BufferedImage(IMAGEWIDTH*CODESIZE, IMAGEHEIGHT, BufferedImage.TYPE_INT_RGB);
 		Graphics graphics = image.getGraphics();
 		//设置背景色
